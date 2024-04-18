@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Princess Martal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Princess Martal</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Princess Martal</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/HeroImg.jpg" alt="Princess Martal profile picture" class="hero-img"/>
+      </div>
+      <div class="section__text">
+        <h1 class="title">Princess Martal</h1>
+        <p class="section__text__p2">Computer Programming and Analysis @ Seneca Polytechnic</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Resume.pdf')"
+          >
+            Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Me
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/princessmartal/'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!---ABOUT ME SECTION -->
+
+    <section id="about">
+      
+      <h1 class="title">A little bit about me</h1>
+
+      <div class="about-details-container">
+        <div class="about-containers">
+                
+            <div class="details-container">
+              <div class="text-container">
+                <p>
+                    Hello! I'm Princess Martal. Originally from the Philippines, I moved to Canada when I was 14, embracing a journey that led me to explore multiple career paths and passions. My journey began in healthcare after high school, leading me to a Personal Support Worker program, driven by a free opportunity to delve into healthcare. While this experience provided invaluable insights, I soon realized my true calling was in a different field. My curiosity and creative drive led me to a 6-month UX Design bootcamp at the University of Toronto, where I fell in love with the world of frontend development. Now, as a Computer Programming and Analysis student at Seneca Polytechnic, I continue to refine my skills and seek out new challenges in tech. I am eager to connect with like-minded professionals and explore innovative opportunities in frontend development.
+                </p>
+            </div>
+            </div>
+
+            <div class="details-container">
+              <div class="basic-info">
+                <p><span class="info-title">Name:</span><span class="info-content">Princess Martal</span></p>
+                <p><span class="info-title">Age:</span><span class="info-content">21</span></p>
+                <p><span class="info-title">Email:</span><span class="info-content">pcmartal@myseneca.ca</span></p>
+                <p><span class="info-title">Language:</span><span class="info-content">English, Tagalog</span></p>
+                <p><span class="info-title">Class Section:</span><span class="info-content">NEE</span></p>
+                <p><span class="info-title">Instructor:</span><span class="info-content">Mark Meritt</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!---EDUCATION SECTION -->
+
+    <section id="education">
+
+      <h1 class="title">Education</h1>
+
+      <div class="education-details-container">
+        <div class="education-containers">
+                
+            <div class="education-details">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Conestoga College</h3>
+              <p>Certificate in Personal Support Worker</p>
+            </div>
+
+            <div class="education-details">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>University of Toronto</h3>
+              <p>Certificate in UX/UI Design</p>
+            </div>
+
+            <div class="education-details">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Seneca Polytechnic</h3>
+              <p>Advanced Diploma in Computer Programming and Analysis</p>
+            </div>
+
+            
+
+            
+          </div>
+      </div>
+     
+    </section>
+
+    <!-- CONTACT -->
+   
+ 
+    <section id="contact">
+
+      <h1 class="title">Don't be a stanger. <br> Let's connect!</h1>
+
+      <div class="contact-form-container">
+        <div class="form-containers">
+                
+            <div class="form-details">
+              <form id="contactForm" action="https://httpbin.org/post" method="POST">
+                <div class="form-input">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" form="contactForm" required />
+                </div>
+
+                <div class="form-input">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" form="contactForm" required />
+                </div>
+
+                <div class="form-input">
+                  <label for="address">Address *</label>
+                  <input type="text" id="address" name="address" form="contactForm" required></input>
+                </div>
+
+                <div class="form-input">
+                  <label for="city">City *</label>
+                  <input list="cities" id="city" name="city" form="contactForm" required>
+                  <datalist id="cities">
+                    <option value="Toronto"></option>
+                    <option value="Mississauga"></option>
+                    <option value="Montreal"></option>
+                    <option value="Vancouver"></option>
+                    <option value="Ottawa"></option>
+                  </datalist>
+                </div>
+
+                <div class="form-input">
+                  <label for="postalCode">Postal Code *</label>
+                  <input type="text" id="postalCode" name="postalCode" pattern="^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$" title="ERROR: Please enter a valid postal codee. (ei. A1B 2C3)" form="contactForm" required>
+                </div>
+
+                <div class="form-input">
+                  <span>Select your inquiry:</span>
+                  <label><input type="radio" name="inquiry" value="Question" checked>Question</label>
+                  <label><input type="radio" name="inquiry" value="Comment">Comment</label>
+                  <label><input type="radio" name="inquiry" value="Hiring">Hiring</label>
+                </div>
+
+                <div class="form-input hidden" id="rate">
+                  <label for="hourlyRate">Hourly Rate *</label>
+                  <input type="number" id="hourlyRate" name="hourlyRate" form="contactForm" min="0" required>
+                </div>
+
+                <div class="form-input">
+                  <label for="message">Message *</label>
+                  <textarea id="message" name="message" form="contactForm" required></textarea>
+                </div>
+
+                <div class="form-input">
+                  <label for="meetingDate">Schedule a Meeting</label>
+                  <input type="date" id="meetingDate" name="meetingDate" form="contactForm">
+                </div>
+
+                <div class="form-input">
+                  <button type="submit" class="btn btn-color-1">Submit</button>
+    
+              </form>
+            </div>
+
+          
+        
+          </div>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>2024 Princess Martal</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
